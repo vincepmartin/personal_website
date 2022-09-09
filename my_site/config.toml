@@ -17,7 +17,7 @@ disqusShortname = "yourdiscussshortname"
   info = "Software Engineer"
   description = "John Doe's personal website"
   keywords = "blog,developer,personal"
-  avatarurl = "images/avatar.jpg"
+  avatarurl = "images/3dme.jpg"
   #gravatar = "john.doe@example.com"
 
   favicon_32 = "/img/favicon-32x32.png"
@@ -52,7 +52,7 @@ disqusShortname = "yourdiscussshortname"
   url = "https://github.com/vincepmartin/"
 [[params.social]]
   name = "Strava"
-  icon = "fa fa-gitlab fa-2x"
+  icon = "fa fa-bicycle fa-2x"
   weight = 2
   url = "https://www.strava.com/athletes/robotburrito"
 

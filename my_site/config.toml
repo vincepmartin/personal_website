@@ -15,7 +15,7 @@ disqusShortname = "yourdiscussshortname"
 [params]
   author = "Vincent Martin"
   info = "Software Engineer"
-  description = "John Doe's personal website"
+  description = "Vincent Martin's Personal Website"
   keywords = "blog,developer,personal"
   avatarurl = "images/3dme.jpg"
   #gravatar = "john.doe@example.com"

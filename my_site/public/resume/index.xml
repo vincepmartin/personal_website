@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resumes on Vincent Martin</title>
+    <link>https://www.finalatomicbuster.net/resume/</link>
+    <description>Recent content in Resumes on Vincent Martin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 09 Sep 2022 19:02:16 -0700</lastBuildDate><atom:link href="https://www.finalatomicbuster.net/resume/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vincent Martin - Software Engineer</title>
+      <link>https://www.finalatomicbuster.net/resume/resume-latest/</link>
+      <pubDate>Fri, 09 Sep 2022 19:02:16 -0700</pubDate>
+      
+      <guid>https://www.finalatomicbuster.net/resume/resume-latest/</guid>
+      <description>PDF Version
+vince@finalatomicbuster.net - www.finalatomicbuster.net
+Experience  Link to heading   Software Engineer, Tekmetric. June 2021 - August 2022
+ Contributed to a heavily used React JS application for a SaaS company Designed and implemented new user friendly components to make users happier and more productive Redesigned legacy components to be more feature rich and easier to use Refactored app from using 3 different styling solutions to Tailwind CSS, simplifying code base for new engineers Simplifying heavily used class based React components by converting to functional ones utilizing hooks Added needed features to Express JS based REST backend Provided code reviews for peers new features Released code daily and dealt with the consequences of that!</description>
+    </item>
+    
+  </channel>
+</rss>

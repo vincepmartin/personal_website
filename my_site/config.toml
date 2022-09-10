@@ -17,7 +17,7 @@ disqusShortname = "yourdiscussshortname"
   info = "Software Engineer"
   description = "Vincent Martin's Personal Website"
   keywords = "blog,developer,personal"
-  avatarurl = "images/3dme.jpg"
+  avatarurl = "images/3dme-red-smile.jpg"
   #gravatar = "john.doe@example.com"
 
   favicon_32 = "/img/favicon-32x32.png"

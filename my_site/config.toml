@@ -23,7 +23,7 @@ disqusShortname = "yourdiscussshortname"
   favicon_32 = "/img/favicon-32x32.png"
   favicon_16 = "/img/favicon-16x16.png"
 
-  since = 2019
+  # since = 2019
 
   enableTwemoji = true
 
@@ -62,6 +62,14 @@ disqusShortname = "yourdiscussshortname"
   weight = 1
   url  = "posts/"
 [[menu.main]]
-  name = "About"
+  name = "Side Projects"
   weight = 2
-  url = "about/"
+  url  = "sideprojects/"
+[[menu.main]]
+  name = "Resume"
+  weight = 3
+  url  = "resume/resume-latest/"
+[[menu.main]]
+  name = "About"
+  weight = 4
+  url = "about/about-me/"

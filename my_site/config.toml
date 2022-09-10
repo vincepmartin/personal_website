@@ -64,7 +64,7 @@ disqusShortname = "yourdiscussshortname"
 [[menu.main]]
   name = "Side Projects"
   weight = 2
-  url  = "sideprojects/"
+  url  = "sideprojects/sideprojects/"
 [[menu.main]]
   name = "Resume"
   weight = 3

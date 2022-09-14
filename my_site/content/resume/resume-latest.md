@@ -46,7 +46,7 @@ vince@finalatomicbuster.net - www.finalatomicbuster.net
 - Installed and maintained wireless network infrastructure used by the traveling press corp during the 2004 and 2008 presidential elections
 - Worked with the press to maintain their access and solve any unforeseen problems during Presidential debates and political events
 
-**Network Operations Control Engineer**, *Business Information Group:* December 2005 - January 2006
+**Network Operations Control Engineer**, *Business Information Group:* December 2004 - January 2006
 - Designed and maintained an infrastructure capable of monitoring hundreds of critical point to point radio systems throughout the country
 - Maintained and monitored wireless networks installed by my company and 3rd parties such as AT&T's NYC cellular network and the Federal Aviation Administration
 

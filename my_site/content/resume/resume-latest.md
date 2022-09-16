@@ -8,7 +8,7 @@ draft: false
 vince@finalatomicbuster.net - www.finalatomicbuster.net
 
 # Experience
-**Software Engineer**, Tekmetric. June 2021 - August 2022
+**Senior Software Engineer**, Tekmetric. June 2021 - August 2022
 - Contributed to a heavily used React JS application for a SaaS company
 - Designed and implemented new user friendly components to make users happier and more productive 
 - Redesigned legacy components to be more feature rich and easier to use
@@ -18,7 +18,7 @@ vince@finalatomicbuster.net - www.finalatomicbuster.net
 - Provided code reviews for peers new features
 - Released code daily and dealt with the consequences of that!
 
-**Software Engineer**, FedNat. July 2015 - May 2021
+**Senior Software Engineer**, FedNat. July 2015 - May 2021
 - Primary developer on a React JS app working with UX/UI, QA and fellow engineering team members using AGILE methodology
 - Improved system uptime for critical business processes by creating a service that monitors all running processes 
 - Maintained backend Java/Kotlin services that pass and transform insurance data throughout the organization

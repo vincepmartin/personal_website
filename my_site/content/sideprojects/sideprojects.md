@@ -6,6 +6,18 @@ draft: false
 # Here are a few of my side projects!
 In my space time I like to create a variety of small apps and side projects.  Here are a few React based ones that live online.
 
+### Bikehopper
+Bikehopper is route creator for people who like to combine cycling and public transit to get places.  It creates better routes than many other services in my opinion. 
+
+My contribution to this project is the creation of a backend service that allows routes that are created to be converted to a .fit file which is compatible with many cycling computers such as Wahoo and Garmin devices.  This file allows your cycling computer to provide turn by turn directions and lets you ditch your phone while riding.
+
+[Bikehopper Live](https://bikehopper.org/)
+
+[Bikehopper Github](https://github.com/bikehopper/)
+
+[Bikehopper Fit File Creator Github](https://github.com/bikehopper/bikehopper-fit-file-server)
+
+
 ### Memecycle
 I am a heavy user of Strava and have created an alternative that gets great inspiration from [pastebin.com](https://www.pastebin.com).  I wanted a site that would allow me to quickly upload GPS files and photos to share some of my bicycle rides.
 

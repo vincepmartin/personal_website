@@ -3037,7 +3037,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 31.25%; }
 
 body {
   color: #212121;

@@ -62,7 +62,7 @@ disqusShortname = "yourdiscussshortname"
 [[menu.main]]
   name = "Resume"
   weight = 1
-  url  = "resume/resume-latest/"
+  url  = "resume/2024_latest_resume/"
 [[menu.main]]
   name = "About"
   weight = 3

@@ -6,7 +6,18 @@
     <description>Recent content on Vincent Martin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Sep 2022 19:12:14 -0700</lastBuildDate><atom:link href="https://www.finalatomicbuster.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jan 2024 14:57:15 -0800</lastBuildDate><atom:link href="https://www.finalatomicbuster.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vincent Martin - Software Engineer</title>
+      <link>https://www.finalatomicbuster.net/resume/2024_latest_resume/</link>
+      <pubDate>Sat, 06 Jan 2024 14:57:15 -0800</pubDate>
+      
+      <guid>https://www.finalatomicbuster.net/resume/2024_latest_resume/</guid>
+      <description>PDF Version
+Experience  Link to heading   Senior Software Engineer, End Point Dev. April 2023 - Current
+ Contributed to the development of the GNU/Casepointer public health software suite for a variety of US jurisdictions using Java, JS, React, and PSQL Made epidemiologists more productive and happy by designing and implementing new features. Supported epidemiologists during their daily usage of Casepointer Lead the implementation of the National Notifiable Disease Surveillance System for multiple states Improved security of public health information by fixing security issues found during audits and penetration tests Managed forks of Casepointer for multiple clients with individual needs and kept them up to date with upstream consortium code Handled the release process in a GNU/Linux environment for multiple clients Provided code reviews for peers providing guidance when needed  Senior Software Engineer, Tekmetric.</description>
+    </item>
+    
     <item>
       <title>Sideprojects</title>
       <link>https://www.finalatomicbuster.net/sideprojects/sideprojects/</link>

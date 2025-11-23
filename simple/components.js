@@ -54,3 +54,52 @@ class SiteMenu extends HTMLElement {
   }
 }
 customElements.define("site-menu", SiteMenu);
+
+/**
+ * Component: WritingsRenderer
+ * About: Let's render all of our articles.
+ */
+class WritingsRenderer extends HTMLElement {
+  constructor() {
+    super();
+    console.log("WRITINGS RENDERER!");
+  }
+
+  // Render our article
+  // TODO: Surely this can be done via templates?
+  renderArticle(rawArticle) {
+    const article = document.createElement("div");
+    const articleContent = document.createElement("p");
+    rawArticle.split(/\r?\n/).forEach((line) => {
+      if (line.startsWith("Title:")) {
+        const title = document.createElement("h1");
+        title.textContent = line;
+        article.appendChild(title);
+      } else if (line.startsWith("Date:")) {
+        const date = document.createElement("h2");
+        date.textContent = line;
+        article.appendChild(date);
+      } else {
+        articleContent.textContent += line;
+      }
+    });
+    article.appendChild(articleContent);
+    return article;
+  }
+
+  connectedCallback() {
+    console.log("Getting articles...");
+    fetch("./writings.md")
+      .then((resp) => resp.text())
+      .then((text) => {
+        text.split("---").forEach((article) => {
+          this.appendChild(this.renderArticle(article));
+        });
+      })
+      .catch((error) => {
+        console.log("Problem fetching articles.");
+        this.textContent = error;
+      });
+  }
+}
+customElements.define("writings-renderer", WritingsRenderer);

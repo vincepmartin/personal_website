@@ -75,6 +75,7 @@ class WritingsRenderer extends HTMLElement {
 
   renderArticle(rawArticle) {
     const article = document.createElement("div");
+    article.setAttribute("class", "breathe");
     let articleContent = document.createElement("p");
     rawArticle.split(/\r?\n/).forEach((line) => {
       if (line.startsWith("Title:")) {

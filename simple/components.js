@@ -62,10 +62,8 @@ customElements.define("site-menu", SiteMenu);
 class WritingsRenderer extends HTMLElement {
   constructor() {
     super();
-    console.log("WRITINGS RENDERER!");
   }
 
-  // Create an image.
   createImage(line) {
     const [, alt, src] = line.match(/!\[([^\]]*)\]\(([^)]*)\)/) || [];
     const img = document.createElement("img");
@@ -75,23 +73,19 @@ class WritingsRenderer extends HTMLElement {
     return img;
   }
 
-  // Render our article
-  // TODO: Surely this can be done via templates?
   renderArticle(rawArticle) {
     const article = document.createElement("div");
     let articleContent = document.createElement("p");
     rawArticle.split(/\r?\n/).forEach((line) => {
       if (line.startsWith("Title:")) {
-        const title = document.createElement("h1");
-        title.textContent = line;
+        const title = document.createElement("h2");
+        title.textContent = line.match(/Title:(.*)/)[1];
         article.appendChild(title);
       } else if (line.startsWith("Date:")) {
-        const date = document.createElement("h2");
-        date.textContent = line;
+        const date = document.createElement("h3");
+        date.textContent = line.match(/Date:(.*)/)[1];
         article.appendChild(date);
-      }
-      // TODO: Consider altering this so images can be mid line.
-      else if (line.startsWith("![")) {
+      } else if (line.startsWith("![")) {
         const image = this.createImage(line);
         article.appendChild(articleContent);
         articleContent = article.appendChild(image);
@@ -124,12 +118,10 @@ class WritingsRenderer extends HTMLElement {
       })
       .then((articles) => {
         articles.toReversed().forEach((a) => {
-          console.log("Appending article...");
           this.appendChild(a);
         });
       })
       .catch((error) => {
-        console.log("Problem fetching article!");
         this.textContent = error;
       });
   }

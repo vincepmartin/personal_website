@@ -65,11 +65,21 @@ class WritingsRenderer extends HTMLElement {
     console.log("WRITINGS RENDERER!");
   }
 
+  // Create an image.
+  createImage(line) {
+    const [, alt, src] = line.match(/!\[([^\]]*)\]\(([^)]*)\)/) || [];
+    const img = document.createElement("img");
+    img.setAttribute("alt", alt || "Image");
+    img.setAttribute("src", src || "default.jpg");
+    img.setAttribute("class", "");
+    return img;
+  }
+
   // Render our article
   // TODO: Surely this can be done via templates?
   renderArticle(rawArticle) {
     const article = document.createElement("div");
-    const articleContent = document.createElement("p");
+    let articleContent = document.createElement("p");
     rawArticle.split(/\r?\n/).forEach((line) => {
       if (line.startsWith("Title:")) {
         const title = document.createElement("h1");
@@ -79,6 +89,14 @@ class WritingsRenderer extends HTMLElement {
         const date = document.createElement("h2");
         date.textContent = line;
         article.appendChild(date);
+      }
+      // TODO: Consider altering this so images can be mid line.
+      else if (line.startsWith("![")) {
+        const image = this.createImage(line);
+        article.appendChild(articleContent);
+        articleContent = article.appendChild(image);
+        articleContent = document.createElement("p");
+        article.appendChild(image);
       } else {
         articleContent.textContent += line;
       }
@@ -88,16 +106,30 @@ class WritingsRenderer extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log("Getting articles...");
+    const src = this.getAttribute("src") || "";
+    if (src === "") {
+      this.setAttribute("style", "color: red");
+      this.textContent = "Error rendering article!";
+      return;
+    }
+
     fetch("./writings.md")
       .then((resp) => resp.text())
       .then((text) => {
+        let articles = [];
         text.split("---").forEach((article) => {
-          this.appendChild(this.renderArticle(article));
+          articles.push(this.renderArticle(article));
+        });
+        return articles;
+      })
+      .then((articles) => {
+        articles.toReversed().forEach((a) => {
+          console.log("Appending article...");
+          this.appendChild(a);
         });
       })
       .catch((error) => {
-        console.log("Problem fetching articles.");
+        console.log("Problem fetching article!");
         this.textContent = error;
       });
   }

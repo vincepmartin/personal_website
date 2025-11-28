@@ -48,7 +48,7 @@ class SiteMenu extends HTMLElement {
       const m = document.createElement("a");
       m.setAttribute("href", i.href);
       m.textContent = i.label;
-      m.setAttribute("class", active == i.name ? "button active" : "button");
+      m.setAttribute("class", active == i.name ? "active" : "");
       this.appendChild(m);
     });
   }
@@ -73,10 +73,17 @@ class WritingsRenderer extends HTMLElement {
     return img;
   }
 
+  /**
+   * Takes raw markdown and converts its to very basic
+   * HTML for rendering.  Can handle meta data like Title:
+   * Date: and also render text as <p> and images as <img>.
+   */
   renderArticle(rawArticle) {
     const article = document.createElement("div");
     article.setAttribute("class", "breathe");
     let articleContent = document.createElement("p");
+
+    // Handle content types.
     rawArticle.split(/\r?\n/).forEach((line) => {
       if (line.startsWith("Title:")) {
         const title = document.createElement("h2");
@@ -108,6 +115,9 @@ class WritingsRenderer extends HTMLElement {
       return;
     }
 
+    // This is maybe a bit insane and I'm sure I will refactor it at some point
+    // to store my entries in different files or something like
+    // ./writings/<title>.md or something.
     fetch("./writings.md")
       .then((resp) => resp.text())
       .then((text) => {

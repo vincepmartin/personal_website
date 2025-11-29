@@ -7,15 +7,20 @@ class SiteHeader extends HTMLElement {
     super();
   }
   connectedCallback() {
-    const sitename = this.getAttribute("sitename") || "Default Site Name";
-    const name = this.getAttribute("name") || "Default Name";
-    const email = this.getAttribute("email") || "default@email.com";
+    const title = this.getAttribute("title") || "Default Title";
+    const subTitle = this.getAttribute("subtitle") || "Default Subtitle";
 
-    this.innerHTML = `
-    <h1>${sitename}</h1>
-    <h2>${name}</h1>
-    <h3>${email}</h2>
-    `;
+    const titleEl = document.createElement("div");
+    titleEl.setAttribute("class", "title");
+    titleEl.innerText = title;
+    this.appendChild(titleEl);
+
+    const subTitleEl = document.createElement("div");
+    subTitleEl.setAttribute("class", "subtitle");
+    subTitleEl.innerText = subTitle;
+    this.appendChild(subTitleEl);
+
+    this.setAttribute("class", "center header");
   }
 }
 customElements.define("site-header", SiteHeader);
@@ -43,12 +48,12 @@ class SiteMenu extends HTMLElement {
       },
       { name: "writing", label: "Writing", href: "./writing.html" },
     ];
-    this.setAttribute("class", "row");
-    menuItems.forEach((i) => {
+    this.setAttribute("class", "menu center");
+    menuItems.forEach((link) => {
       const m = document.createElement("a");
-      m.setAttribute("href", i.href);
-      m.textContent = i.label;
-      m.setAttribute("class", active == i.name ? "active" : "");
+      m.setAttribute("href", link.href);
+      m.textContent = active === link.name ? `[${link.label}]` : link.label;
+      m.setAttribute("class", "button");
       this.appendChild(m);
     });
   }

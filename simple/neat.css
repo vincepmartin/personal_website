@@ -9,10 +9,9 @@
   --dark: #404040;
   --moredark: #000;
   --link: royalblue;
-  border-top: 5px solid var(--dark);
   line-height: 1.5em;
   font-family: system-ui, sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   color: var(--dark);
 }
 
@@ -86,13 +85,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* Active page... TODO: Fix this, it looks like poop now... */
-.button.active {
-  outline: 0.25em solid var(--light);
-  outline-offset: 2px;
-  outline-color: orange;
-}
-
 .button a {
   text-decoration: none;
 }
@@ -143,10 +135,23 @@ input.center {
   border-radius: 0.25em;
 }
 
+.header {
+  margin-top: 1em;
+}
+
 .menu {
   display: block;
   width: fit-content;
   margin-inline-start: auto;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.subtitle {
+  font-weight: bold;
 }
 
 /* Desktop sizes */

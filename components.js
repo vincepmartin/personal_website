@@ -45,7 +45,7 @@ class SiteMenu extends HTMLElement {
       //   label: "Side Projects",
       //   href: "./sideprojects.html",
       // },
-      { name: "writing", label: "Writing", href: "./writing.html" },
+      // { name: "writing", label: "Writing", href: "./writing.html" },
     ];
     this.setAttribute("class", "menu center");
     menuItems.forEach((link) => {

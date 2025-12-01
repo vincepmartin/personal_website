@@ -1,24 +1,11 @@
-Title: Article 1
-Date: 11/23/2025
+Title: First entry.
+Date: 11/30/2025
 
-Hey here is some writing and stuff...
+This BLOG is written in kind of a weird way. I decided to write my own
+mark down parser that looks through a markdown file and then parses "articles" from it. Each article is labelled
+in such a way that JS can read the Title and Date. Then below that is text that you are reading right now.
 
-Isn't this great?
+Additionally you can add images as such. I know this is a bit silly, and I'm not sure why I did it other than a weird urge to play around with web components.
 
----
-
-Title: Article 2
-Date: 11/23/2025
-
-Holy moly, here is article 2! This is AMAZING!!!
-
----
-
-Title: Article 3 with an image.
-Date: 11/23/2025
-
-Here is some text, this should be followed by an image!
+Anyway... Here is an image!
 ![neovim logo](./images/neovim.svg)
-And then some more text...
-
-Wow this is so awesome!

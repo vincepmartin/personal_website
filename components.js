@@ -45,7 +45,7 @@ class SiteMenu extends HTMLElement {
       //   label: "Side Projects",
       //   href: "./sideprojects.html",
       // },
-      // { name: "writing", label: "Writing", href: "./writing.html" },
+      { name: "writing", label: "Writing", href: "./writing.html" },
     ];
     this.setAttribute("class", "menu center");
     menuItems.forEach((link) => {
@@ -85,7 +85,7 @@ class WritingsRenderer extends HTMLElement {
   renderArticle(rawArticle) {
     const article = document.createElement("div");
     article.setAttribute("class", "breathe");
-    let articleContent = document.createElement("p");
+    //let articleContent = document.createElement("p");
 
     // Handle content types.
     rawArticle.split(/\r?\n/).forEach((line) => {
@@ -99,15 +99,13 @@ class WritingsRenderer extends HTMLElement {
         article.appendChild(date);
       } else if (line.startsWith("![")) {
         const image = this.createImage(line);
-        article.appendChild(articleContent);
-        articleContent = article.appendChild(image);
-        articleContent = document.createElement("p");
         article.appendChild(image);
-      } else {
-        articleContent.textContent += line;
+      } else if (line !== "") {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = line;
+        article.appendChild(paragraph);
       }
     });
-    article.appendChild(articleContent);
     return article;
   }
 

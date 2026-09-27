@@ -151,6 +151,12 @@ input.center {
   margin-bottom: 0.125em;
 }
 
+.tagline {
+  font-weight: bold;
+  font-size: 1.15em;
+  margin: 0.25em 0;
+}
+
 .subtitle {
   font-weight: bold;
 }
